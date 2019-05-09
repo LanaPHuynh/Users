@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Read (One)</title>
+</head>
+<body>
+    {% for user in user %}
+    <hi>User: {{ user["id"] }}</hi>
+    <p>Full Name: {{ user["first_name"] }} {{ user["last_name"] }}</p>
+    <p>Email: {{ user['email'] }}</p>
+    <p>Created on: {{ user['created_at'] }}</p>
+    <p>Last Updated on: {{ user["updated_at"]}}</p>
+    {% endfor %}
+    <a href="/users_id_edit">Edit</a>
+</body>
+</html>
